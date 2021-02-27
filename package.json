@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
+    "postinstall": "cd client && npm install",
     "client": "npm start --prefix client",
     "server": "nodemon server",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "mongoose": "^5.11.18",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-calendar": "^3.3.1"
   }
 }
