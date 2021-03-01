@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import './CalendarV.scss';
 
 export const CalendarV = () => {
-    const [calendarType, onChange] = useState(new Date());
-
+   
     return (
-      <div>
+      <div className="calendar-container">
         <Calendar
-          onChange={onChange}
-          value={calendarType}
+          calendarType="US"
+          locale="en-US"
         />
       </div>     
     );

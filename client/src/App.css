@@ -89,7 +89,7 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #290149;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -135,10 +135,11 @@ input[type='number'] {
   background-color: #e74c3c;
   border: 0;
   color: #fff;
+  border-radius: 14%;
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
-  position: absolute;
+  position:absolute;
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
