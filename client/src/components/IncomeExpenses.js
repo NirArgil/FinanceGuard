@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, createContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { AppContext } from '../context/AppContext';
 
 //Money formatter func
 function moneyFormatter(num) {
@@ -17,8 +18,10 @@ let p = num.toFixed(2).split('.');
   );
 }
 
+
 export const IncomeExpenses = () => {
-  const { transactions } = useContext(GlobalContext);
+  const { transactions } = useContext(GlobalContext); 
+  const context = useContext(AppContext);
 
   const amounts = transactions.map(transaction => transaction.amount);
 
@@ -31,16 +34,23 @@ export const IncomeExpenses = () => {
     -1
      );
 
+context.setTempExpense(expense);
+context.setTempIncome(income);
+
   return (
     <div className="inc-exp-container">
-        <div>
-          <h4>Income</h4>
-  <p className="money plus">{moneyFormatter(income)}</p>
-        </div>
-        <div>
-          <h4>Expense</h4>
-  <p className="money minus">{moneyFormatter(expense)}</p>
-        </div>
-      </div>
-  )
+  <div>
+    <h4>Income</h4>
+<p className="money plus">{moneyFormatter(income)}</p>
+  </div>
+  <div>
+    <h4>Expense</h4>
+<p className="money minus">{moneyFormatter(expense)}</p>
+  </div>
+</div>
+  
+ );
 }
+
+
+

@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { AppContext } from '../context/AppContext'
+
+
 
 //Money formatter func
 function moneyFormatter(num) {
@@ -18,16 +21,23 @@ function moneyFormatter(num) {
   }
   
   export const Balance = () => {
+    const context = useContext(AppContext);
+
     const { transactions } = useContext(GlobalContext);
   
     const amounts = transactions.map(transaction => transaction.amount);
   
     const total = amounts.reduce((acc, item) => (acc += item), 0);
-  
-    return (
+   
+     
+    const totalFunc = context.tempExpense > context.tempIncome ?
+     "Minus " + moneyFormatter(total)  : moneyFormatter(total);
+
+    return (<AppContext.Provider>
       <div>
         <h4>Your Balance</h4>
-        <h1>{moneyFormatter(total)}</h1>
+        <h1>{totalFunc}</h1>
       </div>
+      </AppContext.Provider>
     )
   }

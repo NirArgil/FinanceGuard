@@ -1,6 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 import axios from 'axios';
+import { IncomeExpenses } from '../components/IncomeExpenses';
 
 // Initial state
 const initialState = {
@@ -80,8 +81,9 @@ export const GlobalProvider = ({ children }) => {
     error: state.error,
     loading: state.loading,
     getTransactions,
+    IncomeExpenses,
     deleteTransaction,
-    addTransaction
+    addTransaction,
   }}>
     {children}
   </GlobalContext.Provider>);
