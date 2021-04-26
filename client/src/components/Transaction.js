@@ -1,11 +1,14 @@
 import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { LangContext } from '../context/LangContext';
 
 // Money formatter func
-function moneyFormatter(num) {
+function MoneyFormatter(num) {
+  const { currentCurrency } = useContext(LangContext);
+
   let p = num.toFixed(2).split('.');
   return (
-    '₪ ' +
+    `${currentCurrency === 'ILS' ? '₪ ' : '$ '}` +
     p[0]
       .split('')
       .reverse()
@@ -24,7 +27,7 @@ export const Transaction = ({ transaction }) => {
 
   return (
     <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-      {transaction.text} <span>{sign}{moneyFormatter(transaction.amount)}</span>
+      {transaction.text} <span>{sign}{MoneyFormatter(transaction.amount)}</span>
       <button onClick={() => deleteTransaction(transaction._id)} className="delete-btn">x</button>
     </li>
   )

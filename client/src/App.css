@@ -14,14 +14,232 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 0;
   font-family: 'Lato', sans-serif;
+}
+
+
+.DarkModeBtn {
+  margin-top: 16px;
+  margin-left: 39px;
+}
+
+.LangsBtn {
+  margin-left: 100px;
+  margin-top: 7px;
+
+}
+
+.darkLangsBtn p {
+  color: #e3e3e3;
+}
+
+.darkLangsBtn .MuiToggleButton-root {
+  border: 1px solid #c0c0c0;
+  padding: 0;
+  margin-top: 7px;
+  margin-left: 100px;
+}
+
+.CurrencyBtn {
+  margin-left: 180px;
+  margin-top: 140px;
+}
+
+
+.MuiToggleButton-root {
+  padding: 0 !important;
+}
+
+.MuiToggleButton-root p {
+  margin: 7px;
+}
+
+.darkModeBody {
+  background-color: #1E1E1E;
+  height: 1214px;
+}
+
+.lightModeBody {
+  height: 1214px;
+}
+
+.darkModeBody h1 {
+  color: #c0c0c0;
+}
+
+.darkModeBody h4 {
+  color: #e3e3e3;
+}
+
+.darkModeDivs .list li {
+  color: #e4e4e4;
+  background-color: #313131;
+}
+
+.darkModeDivs {
+  color: #e3e3e3;
+}
+
+.darkModeDivs button {
+  color: #e3e3e3;
+}
+
+.darkModeDivs input {
+  background-color: rgb(206, 206, 206);
+}
+
+.addTransactionDarkMode input {
+  background-color: rgb(206, 206, 206);
+}
+
+.addTransactionDarkMode button {
+  color: #e3e3e3;
+
+}
+
+.addTransactionDarkMode {
+  color: #e3e3e3;
+}
+
+/* .addTransaction{
+
+} */
+
+.inc-exp-containerDarkMode {
+  background-color: #313131;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-containerDarkMode>div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-containerDarkMode>div:first-of-type {
+  border-right: 1px solid #dedede;
 }
 
 .container {
   margin: 30px auto;
   width: 350px;
+}
+
+.balanceDiv h4 {
+  font-size: 23px;
+}
+
+.balanceDiv {
+  margin: 90px 0 30px -10px;
+  text-align: center;
+  width: 350px;
+}
+
+.HEBmode {
+  direction: rtl;
+}
+
+.Header {
+  display: flex;
+  width: 1348px;
+  margin: 0;
+  width: 100%;
+  font-family: Lato;
+  /* background: #fff; */
+  font-weight: 400;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  height: 3.4em;
+  /* justify-content: center; */
+
+}
+
+.Header h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 460px;
+}
+
+.darkHeader {
+  border-bottom: 1px solid rgba(227, 227, 227);
+  display: flex;
+  width: 1348px;
+  margin: 0;
+  font-family: Lato;
+  font-weight: 400;
+  box-shadow: 0 1px 2px 0 rgb(210, 213, 216, 0.5);
+  height: 3.4em;
+}
+
+.darkHeader h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 460px;
+}
+
+.Footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 1348px;
+  text-align: center;
+  margin-top: 230px;
+  font-family: Lato;
+  font-weight: 400;
+  border-top: 1px solid rgba(34, 36, 38, 0.5);
+  vertical-align: middle;
+  height: 3em;
+}
+
+.Footer p {
+  margin-top: 28px;
+  display: inline-block;
+}
+
+.socialIcons a {
+  color: #c0c0c0;
+  font-size: 30px;
+  margin-left:21px;
+}
+
+.socialIcons a:hover {
+  color: #7c7a7a;
+}
+
+.DarksocialIcons a {
+  color: #c0c0c0;
+  font-size: 30px;
+  margin-left:21px;
+}
+
+.DarksocialIcons a:hover {
+  color: #7c7a7a;
+}
+
+.darkFooter {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  width: 1348px;
+  text-align: center;
+  margin-top: 230px;
+  font-family: Lato;
+  font-weight: 400;
+  border-top: 1px solid rgba(227, 227, 227, 0.1);
+  vertical-align: middle;
+  height: 3em;
+}
+
+.darkFooter p {
+  margin-top: 28px;
+  color: #c0c0c0;
+  display: inline-block;
 }
 
 h1 {
@@ -49,12 +267,13 @@ h4 {
   margin: 20px 0;
 }
 
-.inc-exp-container > div {
+
+.inc-exp-container>div {
   flex: 1;
   text-align: center;
 }
 
-.inc-exp-container > div:first-of-type {
+.inc-exp-container>div:first-of-type {
   border-right: 1px solid #dedede;
 }
 
@@ -139,7 +358,7 @@ input[type='number'] {
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
@@ -155,4 +374,167 @@ input[type='number'] {
   .container {
     width: 300px;
   }
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+
+/* Switch starts here */
+.rocker {
+  display: inline-block;
+  position: relative;
+  /*
+  SIZE OF SWITCH
+  ==============
+  All sizes are in em - therefore
+  changing the font-size here
+  will change the size of the switch.
+  See .rocker-small below as example.
+  */
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #e3e3e3;
+}
+
+.rocker-small {
+  font-size: 1em;
+  /* Sizes the switch */
+  margin: 1em;
+}
+
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid #e3e3e3;
+  border-bottom: 0;
+}
+
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+}
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #1a6613;
+  color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+input:checked+.switch-left {
+  background-color: #0084d0;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked+.switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+input:checked+.switch-left+.switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked+.switch-left+.switch-right::before {
+  background-color: #ccc;
+}
+
+/* Keyboard Users */
+input:focus+.switch-left {
+  color: #333;
+}
+
+input:checked:focus+.switch-left {
+  color: #fff;
+}
+
+input:focus+.switch-left+.switch-right {
+  color: #fff;
+}
+
+input:checked:focus+.switch-left+.switch-right {
+  color: #333;
 }
