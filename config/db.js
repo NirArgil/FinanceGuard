@@ -6,10 +6,10 @@ const config = require('config');
 // if(process.env.DB) {
 //   db = process.env.DB;
 // }
-
+let DB = process.env.REACT_APP_DB;
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(`${REACT_APP_DB}`, {
+        const conn = await mongoose.connect(DB, {
             useNewUrlParser: true,
             useCreateIndex: true,
             useUnifiedTopology: true
