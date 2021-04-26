@@ -78,7 +78,7 @@ i18n
             "placeholderAmount": "רשום סכום",
             "select category": "בחר קטגוריה",
             "amount":"סכום",
-            "comments": "פרטים \ תגובות",
+            "comments": "פרטים או תגובות",
             "add income":"הוסף הכנסה",
             "add expense":"הוסף הוצאה",
             "help": "הכנסה: + סכום או הוצאה: - סכום",

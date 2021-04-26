@@ -1,4 +1,5 @@
-export default (state, action) => {
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
+export default (state, action) => { 
     switch(action.type) {
       case 'GET_TRANSACTIONS':
         return {
