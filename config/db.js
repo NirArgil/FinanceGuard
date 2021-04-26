@@ -6,7 +6,7 @@ const config = require('config');
 // if(process.env.DB) {
 //   db = process.env.DB;
 // }
-let DB = process.env.REACT_APP_DB;
+const DB = process.env.REACT_APP_DB;
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(DB, {
