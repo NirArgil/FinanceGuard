@@ -23,8 +23,6 @@ function MoneyFormatter(num) {
 }
 
 export const Balance = () => {
-  const { changeCurrency, currentCurrency } = useContext(LangContext);
-
   const { t } = useTranslation();
 
   const context = useContext(AppContext);

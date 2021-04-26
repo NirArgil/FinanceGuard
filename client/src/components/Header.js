@@ -4,7 +4,6 @@ import { toggleDarkMode } from "../actions/themeActions";
 import { useDispatch, useSelector } from "react-redux";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { ToggleButtonGroup, ToggleButton } from '@material-ui/lab';
-import { dark } from '@material-ui/core/styles/createPalette';
 
 export const Header = () => {
     const { currentLang, changeLanguage, currentCurrency, changeCurrency } = useContext(LangContext);

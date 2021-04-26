@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Bar, Doughnut, defaults } from 'react-chartjs-2'
+import { Doughnut, defaults } from 'react-chartjs-2'
 import { AppContext } from '../../context/AppContext'
 import "./Chart.scss";
 import { useSelector } from "react-redux";
