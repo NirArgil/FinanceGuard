@@ -1,7 +1,4 @@
 /node_modules
 
-# production
-/build
-
 #KEYS
 .env
