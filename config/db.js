@@ -3,9 +3,9 @@ const config = require('config');
 
 let db = config.get("MongoURI");
 
-// if(process.env.REACT_APP_DB) {
-//   db = process.env.REACT_APP_DB;
-// }
+if(process.env.DB) {
+  db = process.env.DB;
+}
 // const DB = DB;
 
 const connectDB = async () => {
