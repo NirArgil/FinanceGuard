@@ -1,15 +1,16 @@
 const mongoose = require('mongoose');
 const config = require('config');
 
-// let db = config.get("MongoURI");
+let db = config.get("MongoURI");
 
-// if(process.env.DB) {
-//   db = process.env.DB;
-// }
-const DB = process.env.REACT_APP_DB;
+if(process.env.REACT_APP_DB) {
+  db = process.env.REACT_APP_DB;
+}
+// const DB = DB;
+
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(DB, {
+        const conn = await mongoose.connect(db, {
             useNewUrlParser: true,
             useCreateIndex: true,
             useUnifiedTopology: true
